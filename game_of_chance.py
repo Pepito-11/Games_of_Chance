@@ -1,5 +1,5 @@
 import random 
->>>>>>> hola
+
 money = 100
 
 #Coin game
