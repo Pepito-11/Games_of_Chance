@@ -1,11 +1,12 @@
 import random 
 money = 100
 
+
 #Coin game
 def coin_flip (bet, choice):
     coin_result = random.randint(1,2)
     if bet > 0 and money > 0:
-        print("Please place you bet")
+        print("Please place your bet")
         print("You bet $" + str(bet))
         print("Flipping coin")
     if coin_result == 1:
@@ -28,7 +29,7 @@ def cho_han (bet, guess):
     dice2 = random.randint(1,6)
     sum_dice = dice1 + dice2
     if bet > 0 and money > 0:
-        print("Please place you bet")
+        print("Please place your bet")
         print("You bet $" + str(bet) + " and you choose " + guess + ".")
         print("Rolling dices")
     if sum_dice % 2 == 0:
@@ -48,7 +49,7 @@ def high_card (bet):
     p1 = deck.pop(random.randint(0, len(deck) -1))
     p2 = deck.pop(random.randint(0, len(deck) -1))
     if bet > 0 and money > 0:
-        print("Please place you bet.")
+        print("Please place your bet.")
         print("You bet $" + str(bet))
         print("Draw a card.")
     if p1 > p2:
@@ -71,7 +72,7 @@ def roul(bet, choice):
     win = "Congratulations you won $" + str(bet) + "."
     landing = "The ball landed on: "
     if bet > 0 and money > 0:
-        print("Please place you bet.")
+        print("Please place your bet.")
         print("You bet $" + str(bet))
         print("No more bets.")
         print(bet_on + str(choice))
@@ -112,14 +113,20 @@ def roul(bet, choice):
         print(landing + str(number))
         print(loose)
         return -bet
-
+    
 #while_loop
 
-while money > 0 :
+while money > 0:
     money += coin_flip(25, "Heads")
+    print("Total money: $" + str(money))
+    print("-------------") 
     money += cho_han(35, "Odd")
+    print("Total money: $" + str(money))
+    print("-------------") 
     money += high_card(20)
+    print("Total money: $" + str(money))
+    print("-------------") 
     money += roul(30, "Black")
     print("Total money: $" + str(money))
-    
+    print("-------------") 
     
