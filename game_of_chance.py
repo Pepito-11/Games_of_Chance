@@ -112,6 +112,16 @@ def roul(bet, choice):
         print(landing + str(number))
         print(loose)
         return -bet
+
+#while_loop
+
+while money > 0 :
+    money += coin_flip(25, "Heads")
+    money += cho_han(35, "Odd")
+    money += high_card(20)
+    money += roul(30, "Black")
+    
+    
     
 #Games calling
 money += coin_flip(25, "Heads")
