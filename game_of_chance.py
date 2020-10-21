@@ -120,12 +120,6 @@ while money > 0 :
     money += cho_han(35, "Odd")
     money += high_card(20)
     money += roul(30, "Black")
+    print("Total money: $" + str(money))
     
     
-    
-#Games calling
-money += coin_flip(25, "Heads")
-money += cho_han(35, "Odd")
-money += high_card(20)
-money += roul(30, "Black")
-print("Total money: $" + str(money))
